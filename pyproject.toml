@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dikte"
+version = "2.2.0"
+description = "Voice-to-text dictation app."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "yusufipk" }]
+license = { text = "GPL-3.0-or-later" }
+keywords = ["dictation", "speech", "transcription", "pyqt"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: X11Applications",
+  "Intended Audience :: End Users",
+  "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+  "Operating System :: MacOS",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Multimedia :: Sound/Audio",
+  "Topic :: Utilities",
+]
+dependencies = [
+  "PyQt6>=6.5",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=8.0",
+]
+
+[tool.setuptools]
+packages = ["dikte"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
